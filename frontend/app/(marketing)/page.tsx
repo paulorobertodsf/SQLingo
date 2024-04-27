@@ -21,12 +21,12 @@ export default function Home() {
         </ClerkLoading>
         <ClerkLoaded>
           <SignedOut>
-            <SignUpButton mode="modal" forceRedirectUrl="/questions">
+            <SignUpButton mode="modal" forceRedirectUrl="/learn">
               <Button size="lg" variant="secondary" className="w-full">
                 Get Started
               </Button>
             </SignUpButton>
-            <SignInButton mode="modal" forceRedirectUrl="/questions">
+            <SignInButton mode="modal" forceRedirectUrl="/learn">
               <Button size="lg" variant="primaryOutline" className="w-full">
                 I already have an account
               </Button>
@@ -34,7 +34,7 @@ export default function Home() {
           </SignedOut>
           <SignedIn>
             <Button size="lg" variant="secondary" className="w-full" asChild>
-              <Link href="/questions">
+              <Link href="/learn">
                 Continue learning
               </Link>
             </Button>
