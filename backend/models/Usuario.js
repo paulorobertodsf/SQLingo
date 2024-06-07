@@ -8,19 +8,19 @@ async function openDb() {
     });
 }
 
-export async function createExercicio({ id_licao, pergunta, resposta }) {
+export async function createUsuario({ nome_usuario, email, senha }) {
     const db = await openDb();
     const result = await db.run(
-        'INSERT INTO exercicios (id_licao, pergunta, resposta) VALUES (?, ?, ?)',
-        [id_licao, pergunta, resposta]
+        'INSERT INTO usuarios (nome_usuario, email, senha) VALUES (?, ?, ?)',
+        [nome_usuario, email, senha]
     );
     await db.close();
     return result;
 }
 
-export async function getExercicioById(id) {
+export async function getUsuarioById(id) {
     const db = await openDb();
-    const exercicio = await db.get('SELECT * FROM exercicios WHERE id = ?', [id]);
+    const usuario = await db.get('SELECT * FROM usuarios WHERE id = ?', [id]);
     await db.close();
-    return exercicio;
+    return usuario;
 }

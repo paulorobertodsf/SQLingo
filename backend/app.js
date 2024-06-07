@@ -1,2 +1,3 @@
-var msg = 'Hello World';
-console.log(msg);
+import { criarBanco } from '.database.js';
+
+criarBanco();

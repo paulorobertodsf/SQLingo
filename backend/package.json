@@ -1,18 +1,18 @@
 {
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "database": "node database.js"
+  },
+  "author": "Luana Nietto",
+  "license": "ISC",
   "dependencies": {
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
     "typeorm": "^0.3.20"
-  },
-  "name": "backend",
-  "version": "1.0.0",
-  "main": "app.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-  },
-  "author": "Luana Nietto",
-  "license": "ISC",
-  "description": ""
+  }
 }
