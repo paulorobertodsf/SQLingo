@@ -1,12 +1,17 @@
-import { FeedWrapper } from "@/components/feed-wrapper";
-import { Header } from "./header";
+import { getCourses } from "@/db/queries";
+import { List } from "./list";
 
-const LearnPage = () => {
+const LearnPage = async () => {
+    const courses = await getCourses();
     return (
-        <div className="flex flex-row gap-[48px] px-6">
-            <FeedWrapper>
-                <Header title="DML - Data Manipulation Language"/>
-            </FeedWrapper>
+        <div className="h-full max-w-[912px] px-3 mx-auto">
+            <h1 className="text-2xl font-bold text-neutral-700">
+                SQL Operations
+            </h1>
+            <List
+                courses={courses}
+                activeCourseId={9}
+            />
         </div>
     )
 };
