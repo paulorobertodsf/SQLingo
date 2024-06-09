@@ -1,15 +1,12 @@
 import express = require('express')
-import { CreateCourse, DeleteCourseById, FindAllCourses } from './controllers/courseController';
 import { createConnection } from 'typeorm';
 import typeormConfig from '../typeorm.config';
+import coursesRoutes from './routes/coursesRoutes';
 
 const app = express();
-
 app.use(express.json());
 
-app.post('/courses', CreateCourse);
-app.get('/courses', FindAllCourses);
-app.delete('/courses', DeleteCourseById)
+app.use('/api', coursesRoutes)
 
 const PORT = process.env.PORT || 4000;
 
