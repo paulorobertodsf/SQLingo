@@ -8,7 +8,7 @@ Para instalar pasta node-modules:
 
 Iniciar o projeto backend:
 
-`npm start` 
+`npm run dev` 
 
 **Iniciar projeto frontend**
 

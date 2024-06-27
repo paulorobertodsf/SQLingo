@@ -20,10 +20,9 @@ export const Sidebar = ({className}: Props) => {
             </Link>
             <div className="flex flex-col gap-y-2 flex-1">
                 <SidebarItem label="Learn" href="/learn" iconSrc="/learn.svg"/>
-                <SidebarItem label="Practice" href="/practice" iconSrc="/sqlpractice.svg"/>
+                <SidebarItem label="Practice" href="https://sqlfiddle.com/" iconSrc="/sqlpractice.svg"/>
                 <SidebarItem label="Questions" href="/questions" iconSrc="/questions.svg"/>
                 <SidebarItem label="Mystery" href="https://mystery.knightlab.com/" iconSrc="/detective.svg"/>
-                
             </div>
             <div className="p-4">
                 <ClerkLoading>
