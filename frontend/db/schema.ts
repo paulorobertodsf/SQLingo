@@ -3,3 +3,9 @@ export interface Course {
     title: string
     image_src: string
 }
+
+export interface Question{
+    id: number;
+    question: string
+    answer: string
+}

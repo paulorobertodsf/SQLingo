@@ -4,7 +4,6 @@ import { Question } from '../entities/Question';
 
 export const CreateQuestion = async (req: Request, res: Response): Promise<void> => {
   const QuestionRepository = getRepository(Question);
-  console.log(req.body)
   const { question, answer } = req.body;
   try {
     const newQuestion = QuestionRepository.create({ question, answer });
@@ -34,7 +33,7 @@ export const FindQuestion = async (req: Request, res: Response): Promise<void> =
     const QuestionRepository = getRepository(Question);
     const { id } = req.body
     try {
-      const data = await QuestionRepository.findBy({id : id});
+      const data = await QuestionRepository.findOneBy({id : id});
       res.status(200).json(data);
     } catch (error) {
       res.status(500).json({ error: error });

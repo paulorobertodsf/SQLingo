@@ -6,7 +6,7 @@ const questionRoutes: Router = express.Router();
 
 questionRoutes.post('/question', CreateQuestion);
 questionRoutes.get('/questions', FindAllQuestions);
-questionRoutes.get('/question', FindQuestion);
+questionRoutes.get('/question/:id', FindQuestion);
 questionRoutes.delete('/question', DeleteQuestionById);
 
 export default questionRoutes;
