@@ -2,11 +2,13 @@ import express = require('express')
 import { createConnection } from 'typeorm';
 import typeormConfig from '../typeorm.config';
 import coursesRoutes from './routes/coursesRoutes';
+import questionRoutes from './routes/questionRoutes';
 
 const app = express();
 app.use(express.json());
 
 app.use('/api', coursesRoutes)
+app.use('/api', questionRoutes)
 
 const PORT = process.env.PORT || 4000;
 
